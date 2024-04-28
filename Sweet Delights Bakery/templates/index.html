@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Sweet Delights Bakery - Dashboard</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: "Big Caslon";
+      src: url("path/to/BigCaslon.woff2") format("woff2"),
+        url("path/to/BigCaslon.woff") format("woff");
+    }
+    body {
+      background-color: black;
+      color: white;
+      font-family: "Big Caslon", serif;
+    }
+    .hero {
+      background-color: #bd8c61;
+      color: black;
+      height: 550px;
+      /* margin-top: 50px; */
+      width: 100%;
+    }
+    .hero h1 {
+      font-weight: bolder;
+      margin-left: 20px;
+      font-size: 50px;
+    }
+    .buy {
+      background-color: rgba(0, 0, 0, 0);
+      margin-left: 20px;
+      width: 200px;
+      height: 50px;
+      border: 1px solid black;
+      font-family: "Courier New", Courier, monospace;
+      border-radius: 5px;
+      font-weight: bolder;
+      transition: all 0.5s ease;
+    }
+    .buy:hover {
+      border-radius: 50px;
+      background-color: white;
+      color: black;
+    }
+    .para {
+      width: 50%;
+      font-size: small;
+      margin-left: 20px;
+    }
+    .about h1 {
+      text-decoration: underline;
+      margin-left: 20px;
+      font-weight: bolder;
+      font-family: "Big Caslon", serif;
+    }
+    .about p {
+      margin-left: 20px;
+      font-family: "Big Caslon", serif;
+    }
+    .highlight {
+      background-color: #efe2b2;
+      padding: 5px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      width: 250px;
+      transition: all 0.3s ease; /* Added transition property */
+    }
+    .highlight:hover {
+      font-weight: bolder;
+      background-color: #f7ebbf; /* Smooth transition on hover */
+    }
+
+    .rev h1 {
+      margin-left: 20px;
+      text-decoration: underline;
+      text-align: center;
+    }
+    .cards {
+      width: 400px;
+      height: 300px;
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border-radius: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      display: block;
+      margin: auto;
+      margin-top: 10px;
+      font-family: "Big Caslon", serif;
+    }
+    .cards h4 {
+      font-size: large;
+      font-weight: bolder;
+      text-decoration: underline;
+    }
+    .cards h3 {
+      font-size: large;
+      font-weight: bolder;
+    }
+    .fade-in {
+        opacity: 0; /* Initially, set opacity to 0 */
+        animation: fadeInAnimation 2.5s ease forwards; /* Apply animation */
+        }
+
+    @keyframes fadeInAnimation {
+        from {
+            opacity: 0; /* Start with opacity 0 */
+        }
+        to {
+            opacity: 1; /* Gradually increase opacity to 1 */
+        }
+        }
+
+  </style>
+  <body class="fade-in">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Sweet Delights Bakery</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/"
+                >Dashboard</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/store">Store</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="hero">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1>
+        Savor the <button class="highlight">Sweetness</button>,<br />One Bite at
+        a Time.
+      </h1>
+      <div class="para">
+        <p>
+          Sweet Delights Bakery offers an irresistible array of freshly baked
+          treats, from decadent cakes to delicate pastries, crafted with love
+          and the finest ingredients. Step into our cozy haven and indulge in
+          the magic of homemade goodness, where every bite is a sweet delight
+        </p>
+      </div>
+      <br />
+      <a href="/store"><button id="buy" class="buy">Buy Now</button></a>
+    </section>
+    <br />
+    <h1
+      style="
+        width: 30%;
+        text-align: center;
+        color: white;
+        background-color: white;
+        height: 1.5px;
+        margin: auto;
+        display: block;
+      "
+    ></h1>
+    <br />
+    <br />
+    <br />
+    <section class="about">
+      <h1>About Us</h1>
+      <br />
+      <p>
+        Welcome to Sweet Delights Bakery, where every confection tells a story
+        of passion, tradition, and indulgence. Founded with a deep love for
+        baking and a commitment to quality, Sweet Delights Bakery has been
+        serving up smiles and sweet treats to our community since 1838. At Sweet
+        Delights, we believe in the magic of homemade goodness. Our skilled
+        bakers craft each delicacy with precision and care, using only the
+        finest ingredients to ensure every bite is a moment of pure delight.
+        From decadent cakes and mouthwatering cookies to flaky pastries and
+        creamy cupcakes, our menu is a testament to our dedication to quality
+        and flavor. But Sweet Delights Bakery is more than just a place to
+        satisfy your sweet cravings; it's a place where memories are made.
+        Whether you're celebrating a special occasion, catching up with friends
+        over coffee, or simply treating yourself to a little indulgence, our
+        cozy bakery welcomes you with open arms and irresistible aromas. As a
+        family-owned business, we take pride in our commitment to exceptional
+        service and warm hospitality. We cherish the relationships we've built
+        with our customers over the years and are grateful for the opportunity
+        to be a part of their lives. Thank you for choosing Sweet Delights
+        Bakery as your go-to destination for all things sweet. We look forward
+        to serving you and creating many more sweet memories together!
+      </p>
+      <br />
+    </section>
+    <br />
+    <br />
+    <img
+      src="/next.png"
+      style="
+        margin: auto;
+        display: block;
+        transform: rotate(90deg);
+        height: 150px;
+      "
+    />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <section class="rev">
+      <h1>Reviews</h1>
+      <br />
+      <br />
+      <div class="cards">
+        <h4>Christina Tyler</h4>
+        <p>
+          Absolutely mouthwatering cookies! Each bite is like a little piece of
+          heaven. My favorites are the chocolate chip and peanut butter ones.
+          Can't wait to order again!
+        </p>
+        <h3>
+          Review for: <span class="highlight">Chocolate Chip Cookies</span>
+        </h3>
+        <h3>Ratings: 5.0</h3>
+        <img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        /><img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        /><img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        /><img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        /><img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        />
+      </div>
+      <br />
+      <br />
+      <img
+        src="/next.png"
+        style="
+          margin: auto;
+          display: block;
+          transform: rotate(90deg);
+          height: 150px;
+        "
+      />
+      <br />
+      <br />
+      <div class="cards">
+        <h4>Dr. John Smith</h4>
+        <p>
+          If you're a cookie lover, you NEED to try these! I've never tasted
+          anything like them before. The presentation is also lovely, making
+          them great for gifts. A must-try for any cookie enthusiast!
+        </p>
+        <h3>
+          Review for: <span class="highlight">Snickerdoodle Cookies</span>
+        </h3>
+        <h3>Ratings: 5.0</h3>
+        <img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        /><img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        /><img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        /><img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        /><img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        />
+      </div>
+      <br />
+      <br />
+      <img
+        src="/next.png"
+        style="
+          margin: auto;
+          display: block;
+          transform: rotate(90deg);
+          height: 150px;
+        "
+      />
+      <br />
+      <br />
+      <div class="cards">
+        <h4>Mike Davidson</h4>
+        <p>
+          Wow! Just wow! These cookies are incredible. So soft and chewy with
+          the perfect balance of sweetness. I ordered a dozen for a party, and
+          they were gone in minutes! Although quantity was a lil less but the
+          taste is just too good as i mentioned earlier.
+        </p>
+        <h3>Review for: <span class="highlight">Sugar Cookies</span></h3>
+        <h3>Ratings: 4.9</h3>
+        <img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        /><img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        /><img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        /><img
+          src="https://cdn.hugeicons.com/icons/star-stroke-rounded.svg"
+          alt="star"
+          width="24"
+          height="24"
+        />
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1
+      style="
+        width: 30%;
+        text-align: center;
+        color: white;
+        background-color: white;
+        height: 1.5px;
+        margin: auto;
+        display: block;
+      "
+    ></h1>
+    <br />
+    <br />
+    <br />
+    <section class="about">
+      <h1>Our Location & How to order our products</h1>
+      <br />
+      <br />
+      <div class="nyc">
+        <p>
+          Sweet Delights Bakery is an iconic establishment in the bustling
+          streets of New York City, situated in the heart of Manhattan. Located
+          at 123 Broadway, our bakery stands as a beacon of culinary excellence
+          amidst the vibrant cityscape. As you stroll along the busy sidewalks,
+          the inviting aroma of freshly baked treats emanates from our
+          storefront, enticing passersby to step inside and embark on a
+          delectable journey. From classic cookies to artisanal pastries, each
+          creation reflects the rich tapestry of flavors and cultures that
+          define the Big Apple. Join us at Sweet Delights Bakery, where every
+          bite is a celebration of the city's diverse culinary heritage.
+        </p>
+        <br>
+        <p>
+            At Sweet Delights Bakery, we believe in convenience without compromise.
+            With our user-friendly website, ordering your favorite treats online has
+            never been easier. Simply browse our enticing selection of cookies,
+            cakes, and pastries from the comfort of your home or on the go. With
+            just a few clicks, you can add your desired items to your cart and
+            proceed to checkout seamlessly. Whether you prefer pickup or delivery,
+            our intuitive ordering system ensures that your sweet cravings are
+            satisfied with just a few simple steps. Experience the joy of online
+            ordering with Sweet Delights Bakery – where indulgence meets
+            convenience.
+          </p>
+          <br>
+          <a href="/store"><button class="btn btn-outline-success" style="margin-left:20px;">Order our Products today!</button></a>
+          <br>
+      </div>
+      <br>
+      <br>
+      <img src="/nyc.jpg" style="height:400px;margin-left:20px;">
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

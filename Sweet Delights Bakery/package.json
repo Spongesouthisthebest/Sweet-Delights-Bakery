@@ -1,0 +1,19 @@
+{
+  "name": "sweet-delights-bakery",
+  "version": "1.0.0",
+  "description": "Sweet Delights Bakery offers an irresistible array of freshly baked treats, from decadent cakes to delicate pastries, crafted with love and the finest ingredients.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Syed Ayaan Hussain",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.1",
+    "stripe": "^15.0.0"
+  },
+  "devDependencies": {}
+}
