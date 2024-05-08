@@ -6,7 +6,7 @@ const stripe = require('stripe')('sk_test_51P4TSoSFPrVdKBVbmjp9LASNKS33nvJlYFF5l
 const bcrypt = require("bcrypt")
 app.use(express.static("public"));
 app.use(express.json());
-mongoose.connect('mongodb://localhost:27017/SweetDelightsBakery')
+mongoose.connect('mongodb+srv://aishahussain13579:a9831122132@adainsta.tfexlrz.mongodb.net/SAI')
 
 // User authentication
 
